@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lujain_DIY Home</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {box-sizing: border-box;}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;}
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 20px 50px;
+  text-decoration: none;
+  font-size: 14px;}
+.topnav a.active {
+  background-color: #ddd;
+  color: black;}
+.topnav .search-container {
+  float: centre;
+  padding: 6px 200px;
+  margin-top: 8px;
+  font-size: 14px;
+  border: line;}
+.topnav .search-container button {
+  float: centre;
+  padding: 6px 10px;
+  margin-top: 8px;
+  background: #ddd;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;}
+.topnav .search-container button:hover {
+  background: #ccc;}
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;}
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: centre;
+    width: 100%;
+    margin: 0;
+    padding: 14px;}
+  .topnav input[type=text] {
+    border: 1px solid #ccc; }
+}
+</style>
+</head>
+<body>
+
+<img src="lu-diy.png" width = "100" height = "50" style="float:left;"><div class="topnav">
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="What are you looking for?" name="search" class="search-container">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+</div>
+<br>
+<div class="topnav">
+  <a class="active"href="home.html">Home</a>
+  <a href="notebooks.html"target="_parent">Notebooks</a>
+  <a href="contact.html">Contact</a>
+  <a href="signin.html">Sign in</a>
+  <a href="signup.html">Sign up</a>
+  <a href="checkout.html">Checkout</a>
+</div>
+
+<br><br><h2 style="text-align:center;font-size:300%;font-family:courier;">BEST SALES</h2>
+
+<link rel="stylesheet" href="photo.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<div class="slideshow-container">
+<div class="mySlides fade">
+  <img src="1.png" style="width:100%">
+</div>
+<div class="mySlides fade">
+  <img src="2.png" style="width:100%">
+</div>
+<div class="mySlides fade">
+  <img src="3.png" style="width:100%">
+</div>
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html>
